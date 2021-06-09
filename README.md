@@ -5,6 +5,7 @@ It's compatible with all browser chromium-based, like Chrome and Edge
 - Make the green darker when whatsApp Web is setted in dark mode
 - Enable WhasApp animation in initial home page
 - Limit of height in the writing message area can be changed  
+  
 All modifies to the extension settings are saved in the browser storage, and these are live-apply in WhatsApp Web if this is open
 ## Installation
 1) Download the zip folder from release and extract it in a new folder
