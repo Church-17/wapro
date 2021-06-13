@@ -6,7 +6,7 @@ It's compatible with all browser chromium-based, like Chrome and Edge
 - Enable WhatsApp animation in initial home page
 - Limit of height in the writing message area can be changed  
   
-All modifies to the extension settings are saved in the browser storage, and these are live-apply in WhatsApp Web if this is open
+All modifies to the extension settings are saved in the browser local storage, and these are live-apply in WhatsApp Web if this is open
 ## Installation
 1) Download the zip folder from release and extract it in a new folder
 2) Enable Developer Mode from extensions settings in the browser
