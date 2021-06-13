@@ -2,8 +2,8 @@
 WhatsApp Pro is a browser extension for add some useful feature or improvement in WhatsApp Web  
 It's compatible with all browser chromium-based, like Chrome and Edge
 ## Features
-- Make the green darker when whatsApp Web is setted in dark mode
-- Enable WhasApp animation in initial home page
+- Make the green darker when WhatsApp Web is setted in dark mode
+- Enable WhatsApp animation in initial home page
 - Limit of height in the writing message area can be changed  
   
 All modifies to the extension settings are saved in the browser storage, and these are live-apply in WhatsApp Web if this is open
