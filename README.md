@@ -4,7 +4,7 @@ It's compatible with all browser chromium-based, like Chrome and Edge
 ## Features
 - Make the green darker when WhatsApp Web is setted in dark mode
 - Enable WhatsApp animation in initial home page
-- Limit of height in the writing message area can be changed  
+- Change the limit of height in the writing message area  
   
 All modifies to the extension settings are saved in the browser local storage, and these are live-apply in WhatsApp Web if this is open
 ## Installation
