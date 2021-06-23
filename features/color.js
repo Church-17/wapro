@@ -21,9 +21,10 @@ chrome.storage.sync.get('color', function(data) {
 			--input-border-active: #008c69;\
 			--intro-border: #045f47;\
 			--menu-tabs-list-active: #008c69;\
-			--outgoing-background: #105a4b;\
-			--outgoing-background-rgb: 16,90,75;\
-			--outgoing-background-deeper: #0a4839;\
+			--outgoing-background: #165a43;\
+			--outgoing-background-rgb: 22,90,67;\
+			--outgoing-background-deeper: #124e3a;\
+			--progress-primary: #008c69;\
 			--teal: #008c69;\
 			--typing: #0fa587;\
 			--unread-marker-background: #009c76;\
