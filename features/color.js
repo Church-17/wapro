@@ -6,30 +6,33 @@ if (document.getElementById('changeColor') == null) {
 chrome.storage.sync.get('color', function(data) {
 	if (data.color == true) {
 		document.getElementById('changeColor').innerHTML = '.dark {\
-			--active-tab-marker: #008c69;\
-			--audio-progress-outgoing: #009c76;\
+			---main: #008c69;\
+			---light: #009c76;\
+			---lighter: #0fa587;\
+			--active-tab-marker: var(---main);\
+			--audio-progress-outgoing: var(---light);\
 			--audio-track-outgoing: #136b59;\
-			--beta-tag-background: #185d46;\
-			--button-primary-background: #008c69;\
-			--button-primary-background-hover: #009c76;\
-			--button-round-background: #008c69;\
-			--button-secondary: #008c69;\
-			--button-secondary-hover: #008c69;\
-			--chat-marker-admin: #008c69;\
+			--beta-tag-background: #145d44;\
+			--button-primary-background: var(---main);\
+			--button-primary-background-hover: var(---light);\
+			--button-round-background: var(---main);\
+			--button-secondary: var(---main);\
+			--button-secondary-hover: var(---main);\
+			--chat-marker-admin: var(---main);\
 			--chat-marker-admin-border: rgba(0,140,105,0.7);\
-			--checkbox-background: #008c69;\
-			--highlight: #0fa587;\
-			--input-border-active: #008c69;\
+			--checkbox-background: var(---main);\
+			--highlight: var(---lighter);\
+			--input-border-active: var(---main);\
 			--intro-border: #045f47;\
-			--menu-tabs-list-active: #008c69;\
+			--menu-tabs-list-active: var(---main);\
 			--outgoing-background: #165a43;\
 			--outgoing-background-rgb: 22,90,67;\
 			--outgoing-background-deeper: #124e3a;\
 			--outgoing-background-deeper-rgb: 18,78,58;\
-			--progress-primary: #008c69;\
-			--teal: #008c69;\
-			--typing: #0fa587;\
-			--unread-marker-background: #009c76;\
+			--progress-primary: var(---main);\
+			--teal: var(---main);\
+			--typing: var(---lighter);\
+			--unread-marker-background: var(---light);\
 		}'
 	} else {
 		document.getElementById('changeColor').innerHTML = ''
