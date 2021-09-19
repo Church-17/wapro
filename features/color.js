@@ -24,6 +24,7 @@ chrome.storage.sync.get('color', function(data) {
 			--outgoing-background: #165a43;\
 			--outgoing-background-rgb: 22,90,67;\
 			--outgoing-background-deeper: #124e3a;\
+			--outgoing-background-deeper-rgb: 18,78,58;\
 			--progress-primary: #008c69;\
 			--teal: #008c69;\
 			--typing: #0fa587;\
