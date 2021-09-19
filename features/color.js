@@ -9,6 +9,7 @@ chrome.storage.sync.get('color', function(data) {
 			--active-tab-marker: #008c69;\
 			--audio-progress-outgoing: #009c76;\
 			--audio-track-outgoing: #136b59;\
+			--beta-tag-background: #185d46;\
 			--button-primary-background: #008c69;\
 			--button-primary-background-hover: #009c76;\
 			--button-round-background: #008c69;\
