@@ -100,6 +100,10 @@ input[type="checkbox"]:checked + .slider {
 input[type="checkbox"]:checked + .slider:before {
 	transform: translateX(23px);
 }
+.slider:active, button:active {
+	transform: scale(.85);
+	transition-duration: .1s;
+}
 #lineBack[value="20"] {
 	cursor: not-allowed;
 	opacity: 30%;
