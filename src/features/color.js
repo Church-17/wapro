@@ -20,6 +20,7 @@ chrome.storage.sync.get('color', function(data) {
 			--button-secondary-hover: var(---main);\
 			--chat-marker-admin: var(---main);\
 			--chat-marker-admin-border: rgba(0,140,105,0.7);\
+			--chat-marker-background: #00000000;\
 			--checkbox-background: var(---main);\
 			--highlight: var(---lighter);\
 			--icon-high-emphasis: var(---main);\
