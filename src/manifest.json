@@ -18,7 +18,8 @@
     "js":[
       "features/line.js",
       "features/logo.js",
-      "features/color.js"
+      "features/color.js",
+      "features/notify.js"
     ]
   }]
 }
