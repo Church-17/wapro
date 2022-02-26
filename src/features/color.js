@@ -22,6 +22,7 @@ chrome.storage.sync.get('color', function(data) {
 			--chat-marker-admin-border: rgba(0,140,105,0.7);\
 			--checkbox-background: var(---main);\
 			--highlight: var(---lighter);\
+			--icon-high-emphasis: var(---main);\
 			--input-border-active: var(---main);\
 			--intro-border: #045f47;\
 			--menu-tabs-list-active: var(---main);\
