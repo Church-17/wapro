@@ -32,7 +32,6 @@ chrome.storage.sync.get('color', function(data) {
 			--outgoing-background-deeper-rgb: 18,78,58;\
 			--progress-primary: var(---main);\
 			--round-icon-background: var(---main);\
-			--teal: var(---main);\
 			--typing: var(---lighter);\
 			--unread-marker-background: var(---light);\
 		}'
