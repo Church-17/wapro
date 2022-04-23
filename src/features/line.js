@@ -4,5 +4,5 @@ if (document.getElementById('changeLinePx') == null) {
 	document.head.appendChild(changeLinePx)
 }
 chrome.storage.sync.get('linePx', function(data) {
-	document.getElementById('changeLinePx').innerHTML = '.selectable-text {max-height: ' + data.linePx + 'px!important}'
+	document.getElementById('changeLinePx').innerHTML = '.selectable-text[spellcheck=true] {max-height: ' + data.linePx * 20 + 'px!important}'
 })

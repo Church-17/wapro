@@ -1,6 +1,6 @@
 chrome.storage.sync.get('linePx', function(data) {
 	if (data.linePx == null) {
-		chrome.storage.sync.set({linePx: '300'})
+		chrome.storage.sync.set({linePx: 15})
 	}
 })
 

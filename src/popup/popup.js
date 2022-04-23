@@ -6,31 +6,25 @@ var switchColor = document.getElementById('switchColor')
 var switchNotify = document.getElementById('switchNotify')
 
 chrome.storage.sync.get(['linePx','logo','color', 'notify'], function(data) {
-	lineNow.innerHTML = data.linePx / 20
-	lineBack.value = data.linePx
-	lineForth.value = data.linePx
+	lineNow.innerHTML = data.linePx
 	switchLogo.checked = data.logo
 	switchColor.checked = data.color
 	switchNotify.checked = data.notify
 })
 
 lineBack.onclick = function() {
-	var linePx = lineBack.value
-	if (linePx == 20) {return}
-	lineNow.innerHTML = (linePx - 20) / 20
-	lineBack.value = (linePx - 20)
-	lineForth.value = (linePx - 20)
-	chrome.storage.sync.set({linePx: (linePx - 20)})
+	var linePx = lineNow.innerHTML
+	if (linePx == 1) {return}
+	lineNow.innerHTML = linePx - 1
+	chrome.storage.sync.set({linePx: linePx - 1})
 	chrome.tabs.query({url: "*://web.whatsapp.com/"}, function(tabs) {
 		chrome.tabs.executeScript(tabs[0].id, {file: "feature/line.js"})
     })
 }
 lineForth.onclick = function() {
-	var linePx = lineForth.value
-	lineNow.innerHTML = (linePx - (-20)) / 20
-	lineBack.value = (linePx - (-20))
-	lineForth.value = (linePx - (-20))
-	chrome.storage.sync.set({linePx: (linePx - (-20))})
+	var linePx = lineNow.innerHTML
+	lineNow.innerHTML = linePx - (-1)
+	chrome.storage.sync.set({linePx: linePx - (-1)})
 	chrome.tabs.query({url: "*://web.whatsapp.com/"}, function(tabs) {
 		chrome.tabs.executeScript(tabs[0].id, {file: "feature/line.js"})
     })
