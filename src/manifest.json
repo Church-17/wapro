@@ -9,7 +9,7 @@
   ],
   "host_permissions": ["*://web.whatsapp.com/"],
   "background": {"service_worker": "bg.js"},
-  "browser_action": {"default_popup":"popup/popup.html"},
+  "action": {"default_popup":"popup/popup.html"},
   "icons": {"489": "icon.png"},
   "content_scripts": [{
     "matches": ["*://web.whatsapp.com/"],
