@@ -1,21 +1,19 @@
 {
-  "manifest_version":2,
-  "name":"WhatsApp Pro",
-  "description":"Enable on WhatsApp Web some original features",
-  "version":"1.11",
-  "permissions":[
-    "*://web.whatsapp.com/",
-    "storage"
+  "manifest_version": 3,
+  "name": "WhatsApp Pro",
+  "description": "Enable on WhatsApp Web some original features",
+  "version": "1.12",
+  "permissions": [
+    "storage",
+    "scripting"
   ],
-  "background":{
-    "scripts":["bg.js"],
-    "persistent":false
-  },
-  "browser_action":{"default_popup":"popup/popup.html"},
-  "icons":{"489":"icon.png"},
-  "content_scripts":[{
-    "matches":["*://web.whatsapp.com/"],
-    "js":[
+  "host_permissions": ["*://web.whatsapp.com/"],
+  "background": {"service_worker": "bg.js"},
+  "browser_action": {"default_popup":"popup/popup.html"},
+  "icons": {"489": "icon.png"},
+  "content_scripts": [{
+    "matches": ["*://web.whatsapp.com/"],
+    "js": [
       "features/line.js",
       "features/logo.js",
       "features/color.js",
