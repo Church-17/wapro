@@ -18,6 +18,6 @@ chrome.storage.sync.get('color', function(data) {
 
 chrome.storage.sync.get('notify', function(data) {
 	if (data.notify == null) {
-		chrome.storage.sync.set({notify: false})
+		chrome.storage.sync.set({notify: true})
 	}
 })
