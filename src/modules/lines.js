@@ -4,5 +4,7 @@ if (document.getElementById('id_lines') == null) {
 	document.head.appendChild(id_lines)
 }
 chrome.storage.sync.get('lines', function(data) {
-	document.getElementById('id_lines').innerHTML = '.selectable-text[spellcheck=true] {max-height: ' + data.lines * 20 + 'px!important}'
+	document.getElementById('id_lines').innerHTML = '[spellcheck=true] {\
+		max-height: ' + data.lines * 20 + 'px!important\
+	}'
 })
