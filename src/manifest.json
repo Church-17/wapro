@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "WhatsApp Pro",
   "description": "Enable on WhatsApp Web some original features",
-  "version": "1.12",
+  "version": "1.13",
   "permissions": [
     "storage",
     "scripting"
