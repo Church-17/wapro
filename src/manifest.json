@@ -14,10 +14,10 @@
   "content_scripts": [{
     "matches": ["*://web.whatsapp.com/"],
     "js": [
-      "features/line.js",
-      "features/logo.js",
-      "features/color.js",
-      "features/notify.js"
+      "modules/line.js",
+      "modules/logo.js",
+      "modules/color.js",
+      "modules/notify.js"
     ]
   }]
 }

@@ -30,7 +30,7 @@ lineBack.onclick = function() {
 	lineBack.value = line - 1
 	lineForth.value = line - 1
 	chrome.storage.sync.set({line: line - 1})
-	executeScriptInTab('features/line.js')
+	executeScriptInTab('modules/line.js')
 }
 lineForth.onclick = function() {
 	var line = lineNow.innerHTML
@@ -38,20 +38,20 @@ lineForth.onclick = function() {
 	lineBack.value = line - (-1)
 	lineForth.value = line - (-1)
 	chrome.storage.sync.set({line: line - (-1)})
-	executeScriptInTab('features/line.js')
+	executeScriptInTab('modules/line.js')
 }
 
 switchLogo.onchange = function() {
     chrome.storage.sync.set({logo: switchLogo.checked})
-    executeScriptInTab('features/logo.js')
+    executeScriptInTab('modules/logo.js')
 }
 
 switchColor.onchange = function() {
     chrome.storage.sync.set({color: switchColor.checked})
-    executeScriptInTab('features/color.js')
+    executeScriptInTab('modules/color.js')
 }
 
 switchNotify.onchange = function() {
     chrome.storage.sync.set({notify: switchNotify.checked})
-    executeScriptInTab('features/notify.js')
+    executeScriptInTab('modules/notify.js')
 }
