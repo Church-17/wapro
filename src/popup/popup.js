@@ -11,7 +11,7 @@ var lines_value = document.getElementById('lines_value')
 var lines_back = document.getElementById('lines_back')
 var lines_forth = document.getElementById('lines_forth')
 var logo_switch = document.getElementById('logo_switch')
-var switchColor = document.getElementById('switchColor')
+var color_switch = document.getElementById('color_switch')
 var switchNotify = document.getElementById('switchNotify')
 
 chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
@@ -19,7 +19,7 @@ chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
 	lines_back.value = data.lines
 	lines_forth.value = data.lines
 	logo_switch.checked = data.logo
-	switchColor.checked = data.color
+	color_switch.checked = data.color
 	switchNotify.checked = data.notify
 })
 
@@ -46,8 +46,8 @@ logo_switch.onchange = function() {
     executeScriptInTab('modules/logo.js')
 }
 
-switchColor.onchange = function() {
-    chrome.storage.sync.set({color: switchColor.checked})
+color_switch.onchange = function() {
+    chrome.storage.sync.set({color: color_switch.checked})
     executeScriptInTab('modules/color.js')
 }
 
