@@ -12,7 +12,7 @@ var lines_back = document.getElementById('lines_back')
 var lines_forth = document.getElementById('lines_forth')
 var logo_switch = document.getElementById('logo_switch')
 var color_switch = document.getElementById('color_switch')
-var switchNotify = document.getElementById('switchNotify')
+var notify_switch = document.getElementById('notify_switch')
 
 chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
 	lines_value.innerHTML = data.lines
@@ -20,7 +20,7 @@ chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
 	lines_forth.value = data.lines
 	logo_switch.checked = data.logo
 	color_switch.checked = data.color
-	switchNotify.checked = data.notify
+	notify_switch.checked = data.notify
 })
 
 lines_back.onclick = function() {
@@ -51,7 +51,7 @@ color_switch.onchange = function() {
     executeScriptInTab('modules/color.js')
 }
 
-switchNotify.onchange = function() {
-    chrome.storage.sync.set({notify: switchNotify.checked})
+notify_switch.onchange = function() {
+    chrome.storage.sync.set({notify: notify_switch.checked})
     executeScriptInTab('modules/notify.js')
 }
