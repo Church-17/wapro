@@ -1,6 +1,6 @@
-chrome.storage.sync.get('line', function(data) {
-	if (data.line == null) {
-		chrome.storage.sync.set({line: 15})
+chrome.storage.sync.get('lines', function(data) {
+	if (data.lines == null) {
+		chrome.storage.sync.set({lines: 15})
 	}
 })
 

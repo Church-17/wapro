@@ -14,7 +14,7 @@
   "content_scripts": [{
     "matches": ["*://web.whatsapp.com/"],
     "js": [
-      "modules/line.js",
+      "modules/lines.js",
       "modules/logo.js",
       "modules/color.js",
       "modules/notify.js"

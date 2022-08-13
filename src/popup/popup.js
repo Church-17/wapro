@@ -7,38 +7,38 @@ executeScriptInTab = function(path) {
 	})
 }
 
-var lineNow = document.getElementById('lineNow')
-var lineBack = document.getElementById('lineBack')
-var lineForth = document.getElementById('lineForth')
+var linesNow = document.getElementById('linesNow')
+var linesBack = document.getElementById('linesBack')
+var linesForth = document.getElementById('linesForth')
 var switchLogo = document.getElementById('switchLogo')
 var switchColor = document.getElementById('switchColor')
 var switchNotify = document.getElementById('switchNotify')
 
-chrome.storage.sync.get(['line','logo','color', 'notify'], function(data) {
-	lineNow.innerHTML = data.line
-	lineBack.value = data.line
-	lineForth.value = data.line
+chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
+	linesNow.innerHTML = data.lines
+	linesBack.value = data.lines
+	linesForth.value = data.lines
 	switchLogo.checked = data.logo
 	switchColor.checked = data.color
 	switchNotify.checked = data.notify
 })
 
-lineBack.onclick = function() {
-	var line = lineNow.innerHTML
-	if (line == 1) {return}
-	lineNow.innerHTML = line - 1
-	lineBack.value = line - 1
-	lineForth.value = line - 1
-	chrome.storage.sync.set({line: line - 1})
-	executeScriptInTab('modules/line.js')
+linesBack.onclick = function() {
+	var lines = linesNow.innerHTML
+	if (lines == 1) {return}
+	linesNow.innerHTML = lines - 1
+	linesBack.value = lines - 1
+	linesForth.value = lines - 1
+	chrome.storage.sync.set({lines: lines - 1})
+	executeScriptInTab('modules/lines.js')
 }
-lineForth.onclick = function() {
-	var line = lineNow.innerHTML
-	lineNow.innerHTML = line - (-1)
-	lineBack.value = line - (-1)
-	lineForth.value = line - (-1)
-	chrome.storage.sync.set({line: line - (-1)})
-	executeScriptInTab('modules/line.js')
+linesForth.onclick = function() {
+	var lines = linesNow.innerHTML
+	linesNow.innerHTML = lines - (-1)
+	linesBack.value = lines - (-1)
+	linesForth.value = lines - (-1)
+	chrome.storage.sync.set({lines: lines - (-1)})
+	executeScriptInTab('modules/lines.js')
 }
 
 switchLogo.onchange = function() {
