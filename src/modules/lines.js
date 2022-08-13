@@ -1,8 +1,8 @@
-if (document.getElementById('changelines') == null) {
-	var changelines = document.createElement('style')
-	changelines.id = 'changelines'
-	document.head.appendChild(changelines)
+if (document.getElementById('id_lines') == null) {
+	var id_lines = document.createElement('style')
+	id_lines.id = 'id_lines'
+	document.head.appendChild(id_lines)
 }
 chrome.storage.sync.get('lines', function(data) {
-	document.getElementById('changelines').innerHTML = '.selectable-text[spellcheck=true] {max-height: ' + data.lines * 20 + 'px!important}'
+	document.getElementById('id_lines').innerHTML = '.selectable-text[spellcheck=true] {max-height: ' + data.lines * 20 + 'px!important}'
 })

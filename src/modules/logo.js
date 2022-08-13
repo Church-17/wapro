@@ -1,11 +1,11 @@
-if (document.getElementById('changeLogo') == null) {
-	var changeLogo = document.createElement('style')
-	changeLogo.id = 'changeLogo'
-	document.head.appendChild(changeLogo)
+if (document.getElementById('id_logo') == null) {
+	var id_logo = document.createElement('style')
+	id_logo.id = 'id_logo'
+	document.head.appendChild(id_logo)
 }
 chrome.storage.sync.get('logo', function(data) {
 	if (data.logo == true) {
-		document.getElementById('changeLogo').innerHTML = "html[dir] [data-asset-intro-image-dark] {\
+		document.getElementById('id_logo').innerHTML = "html[dir] [data-asset-intro-image-dark] {\
 			animation: logo 1s steps(15) infinite;\
             background-image: url('/img/animated-doodle_600127bdb5f7627ede5cd4ef320f55b0.png');\
             background-position: 0;\
@@ -21,6 +21,6 @@ chrome.storage.sync.get('logo', function(data) {
 			display: none;\
 		}"
 	} else {
-		document.getElementById('changeLogo').innerHTML = ''
+		document.getElementById('id_logo').innerHTML = ''
 	}
 })

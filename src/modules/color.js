@@ -1,11 +1,11 @@
-if (document.getElementById('changeColor') == null) {
-	var changeColor = document.createElement('style')
-	changeColor.id = 'changeColor'
-	document.head.appendChild(changeColor)
+if (document.getElementById('id_color') == null) {
+	var id_color = document.createElement('style')
+	id_color.id = 'id_color'
+	document.head.appendChild(id_color)
 }
 chrome.storage.sync.get('color', function(data) {
 	if (data.color == true) {
-		document.getElementById('changeColor').innerHTML = '.dark {\
+		document.getElementById('id_color').innerHTML = '.dark {\
 			---main: #008c69;\
 			---light: #009c76;\
 			---lighter: #0fa587;\
@@ -37,6 +37,6 @@ chrome.storage.sync.get('color', function(data) {
 			--unread-marker-background: var(---light);\
 		}'
 	} else {
-		document.getElementById('changeColor').innerHTML = ''
+		document.getElementById('id_color').innerHTML = ''
 	}
 })
