@@ -7,7 +7,7 @@ executeScriptInTab = function(path) {
 	})
 }
 
-var linesNow = document.getElementById('linesNow')
+var lines_value = document.getElementById('lines_value')
 var linesBack = document.getElementById('linesBack')
 var linesForth = document.getElementById('linesForth')
 var switchLogo = document.getElementById('switchLogo')
@@ -15,7 +15,7 @@ var switchColor = document.getElementById('switchColor')
 var switchNotify = document.getElementById('switchNotify')
 
 chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
-	linesNow.innerHTML = data.lines
+	lines_value.innerHTML = data.lines
 	linesBack.value = data.lines
 	linesForth.value = data.lines
 	switchLogo.checked = data.logo
@@ -24,17 +24,17 @@ chrome.storage.sync.get(['lines','logo','color', 'notify'], function(data) {
 })
 
 linesBack.onclick = function() {
-	var lines = linesNow.innerHTML
+	var lines = lines_value.innerHTML
 	if (lines == 1) {return}
-	linesNow.innerHTML = lines - 1
+	lines_value.innerHTML = lines - 1
 	linesBack.value = lines - 1
 	linesForth.value = lines - 1
 	chrome.storage.sync.set({lines: lines - 1})
 	executeScriptInTab('modules/lines.js')
 }
 linesForth.onclick = function() {
-	var lines = linesNow.innerHTML
-	linesNow.innerHTML = lines - (-1)
+	var lines = lines_value.innerHTML
+	lines_value.innerHTML = lines - (-1)
 	linesBack.value = lines - (-1)
 	linesForth.value = lines - (-1)
 	chrome.storage.sync.set({lines: lines - (-1)})
