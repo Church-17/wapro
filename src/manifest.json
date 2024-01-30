@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "WhatsApp Pro",
   "description": "Enable on WhatsApp Web some original features",
-  "version": "1.15",
+  "version": "1.17",
   "permissions": [
     "storage",
     "scripting"
@@ -14,9 +14,9 @@
   "content_scripts": [{
     "matches": ["*://web.whatsapp.com/"],
     "js": [
+      "modules/color.js",
       "modules/lines.js",
-      "modules/logo.js",
-      "modules/color.js"
+      "modules/logo.js"
     ]
   }]
 }
