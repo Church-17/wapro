@@ -5,7 +5,7 @@ if(document.getElementById('id_logo') == null) {
 }
 chrome.storage.sync.get('logo', function(data) {
 	if(data.logo) {
-		document.getElementById('id_logo').innerHTML = "html[dir] [data-asset-intro-image-dark], [data-icon='intro-md-beta-logo-dark'], div:has(> [src='/img/native-desktop-hero_a22b846aefcd2de817624e95873b2064.png']) {\
+		document.getElementById('id_logo').innerHTML = "html[dir] [data-asset-intro-image-dark], [data-icon='intro-md-beta-logo-dark'], div:has(> [src='/img/native-desktop-hero_a22b846aefcd2de817624e95873b2064.png']), div:has(> [src='https://static.whatsapp.net/rsrc.php/v3/y6/r/wa669aeJeom.png']) {\
 			animation: logo 1s steps(15) infinite;\
             background-image: url('/img/animated-doodle_600127bdb5f7627ede5cd4ef320f55b0.png');\
             background-position: 0;\
@@ -18,7 +18,7 @@ chrome.storage.sync.get('logo', function(data) {
         @keyframes logo {\
             to {background-position-x: 100%}\
         }\
-		[data-icon='intro-md-beta-logo-dark'] > svg, [src='/img/native-desktop-hero_a22b846aefcd2de817624e95873b2064.png'] {\
+		[data-icon='intro-md-beta-logo-dark'] > svg, [src='/img/native-desktop-hero_a22b846aefcd2de817624e95873b2064.png'], [src='https://static.whatsapp.net/rsrc.php/v3/y6/r/wa669aeJeom.png'] {\
 			display: none;\
 		}"
 	} else {
